@@ -14,8 +14,6 @@ public class Game {
     private boolean isActive;
     @Column(name = "currentGameTurn")
     private Integer currentGameTurn;
-    @Column(name = "currentPlayersList")
-    private List<Integer> currentPlayersList;
     @Column(name = "gameWinnerId")
     private Integer gameWinnerId;
 
@@ -25,12 +23,10 @@ public class Game {
     public Game(Date date,
                 boolean isActive,
                 Integer currentGameTurn,
-                List<Integer> currentPlayersList,
                 Integer gameWinnerId) {
         this.date = date;
         this.isActive = isActive;
         this.currentGameTurn = currentGameTurn;
-        this.currentPlayersList = currentPlayersList;
         this.gameWinnerId = gameWinnerId;
     }
 
@@ -60,14 +56,6 @@ public class Game {
 
     public void setCurrentGameTurn(Integer currentGameTurn) {
         this.currentGameTurn = currentGameTurn;
-    }
-
-    public List<Integer> getCurrentPlayersList() {
-        return currentPlayersList;
-    }
-
-    public void setCurrentPlayersList(List<Integer> currentPlayersList) {
-        this.currentPlayersList = currentPlayersList;
     }
 
     public Integer getGameWinnerId() {
