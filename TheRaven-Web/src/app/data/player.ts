@@ -1,4 +1,4 @@
-export interface User {
+export interface Player { 
     id: number,
     playerName: string,
     password: string
