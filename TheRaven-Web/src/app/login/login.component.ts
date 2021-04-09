@@ -11,8 +11,8 @@ import {PlayerService} from '../shared/player.service';
 })
 export class LoginComponent implements OnInit {
 
-  unvalidatedPlayer!: Player;
-  returnedPlayer!: Player;
+  unvalidatedPlayer: Player;
+  returnedPlayer: Player;
   isErrorMessageDisplayed: boolean = false;
   isPasswordValid: boolean = false;
 
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     if(this.returnedPlayer != null) {
       this.checkPasswordsAreValid();
       if(this.isPasswordValid) {
-        this.router.navigate(["/list"])
+        this.router.navigate(["/"])
       }
     }
     this.isErrorMessageDisplayed = true;

@@ -1,1 +1,43 @@
-<p>login works!</p>
+<div class="jumbotron">
+    <h1 class="display-4">The Raven</h1>
+    <hr class="my-4" />
+  
+    <div class="container">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group col-3">
+          <label for="playerName">Player Name: </label>
+          <input
+            name="playerName"
+            type="playerName"
+            class="form-control"
+            id="playerName"
+            [(ngModel)]="unvalidatedPlayer.playerName"
+          />
+        </div>
+        <div class="form-group col-3">
+          <label for="password">Password: </label>
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="password"
+            [(ngModel)]="unvalidatedPlayer.password"
+          />
+        </div>
+        <div
+          [hidden]="!isErrorMessageDisplayed"
+          class="form-group col-3"
+          class="alert alert-danger"
+          id="incorrectCredentialsMessage"
+        >
+          Invalid credentials entered.
+        </div>
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary" id="submit_button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
